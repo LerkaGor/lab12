@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.1.8/aframe/build/aframe-ar.js"></script>
+    <body style="margin: 0px; overflow: hidden;">
+        <a-scene webx="requiredFeatures: hit-test, local-floor;
+        optionalFeatures: dom-overlay, unbounded;
+        overlayElement:#overlay;">
+        <a-light color="white" position="0 0 500000"></a-light>
+	<a-scene>
+        <a-marker type='pattern' url='https://raw.githubusercontent.com/LerkaGor/marker/main/pattern-saturn.patt'>
+            <a-camera position="0 0 5" cursor-visible="true" cursorscale="2" cursor-color="#0095DD" cursor-opacity="0.5"></a-camera>
+            <a-sphere radius: 60000 rotation="0 0 27" material="src: https://live.staticflickr.com/65535/52054244854_0d025c21da_b.jpg" animation="property: rotation; to: 0 387 27; dur: 2000; easing: linear; loop: true"></a-sphere>
+    <a-ring radius-inner: 74500 radius-outer:137000 rotation="63 90 0" material="src: https://live.staticflickr.com/65535/52054244854_0d025c21da_b.jpg" animation="property: rotation; to: 63 450 0; dur: 2000; easing: linear; loop: true"></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</html>
